@@ -1,0 +1,496 @@
+:root {
+            --accent-lime: #a3e635;
+            --accent-lime-hover: #84cc16;
+            --accent-glow: rgba(163, 230, 53, 0.15);
+        }
+
+        html {
+            overflow-x: clip;
+            scroll-padding-top: 5rem;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #080b0a;
+            color: #f3f4f6;
+            min-width: 320px;
+            overflow-x: clip;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a,
+        button,
+        input,
+        textarea,
+        select {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Subtle Dark Grid Overlay */
+        .bg-grid-overlay {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Glass Cards */
+        .card-dark {
+            background-color: #0d1210;
+            border: 1px solid #1a231f;
+        }
+        .card-dark:hover {
+            border-color: rgba(163, 230, 53, 0.3);
+        }
+
+        .text-accent {
+            color: var(--accent-lime);
+        }
+        .bg-accent {
+            background-color: var(--accent-lime);
+        }
+        .border-accent {
+            border-color: var(--accent-lime);
+        }
+        .site-logo-link {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .site-logo-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .hero-greeting {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+        .admin-panel-trigger {
+            display: inline-flex;
+            width: 30px;
+            min-height: 28px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(163, 230, 53, 0.22);
+            border-radius: 0.4rem;
+            background: rgba(13, 18, 16, 0.52);
+            padding: 0.25rem;
+            color: #a3e635;
+            font: 600 0.62rem 'JetBrains Mono', monospace;
+            letter-spacing: 0.04em;
+            transition: background-color 160ms ease, border-color 160ms ease;
+        }
+        .admin-panel-trigger:hover,
+        .admin-panel-trigger:focus-visible {
+            border-color: rgba(163, 230, 53, 0.7);
+            background: rgba(163, 230, 53, 0.1);
+        }
+        .codeforces-status {
+            min-height: 1.5rem;
+            overflow-wrap: anywhere;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .codeforces-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            max-width: none;
+            flex: 0 0 auto;
+            object-fit: contain;
+        }
+        .codeforces-icon-small {
+            width: 17px;
+            height: 17px;
+        }
+        .codeforces-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1f8acb;
+            font: 700 0.7rem 'JetBrains Mono', monospace;
+            letter-spacing: 0.08em;
+        }
+        .mac-terminal {
+            overflow: hidden;
+            border: 1px solid rgba(226, 232, 240, 0.2);
+            border-radius: 0.85rem;
+            background: linear-gradient(145deg, rgba(33, 39, 48, 0.72), rgba(11, 15, 20, 0.68));
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38), inset 0 1px rgba(255, 255, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.025);
+            -webkit-backdrop-filter: blur(24px) saturate(155%);
+            backdrop-filter: blur(24px) saturate(155%);
+        }
+        .mac-terminal-titlebar {
+            position: relative;
+            display: flex;
+            min-height: 42px;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035));
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            padding: 0 0.9rem;
+        }
+        .mac-terminal-controls {
+            display: flex;
+            width: 52px;
+            flex: 0 0 52px;
+            align-items: center;
+            gap: 7px;
+        }
+        .mac-terminal-dot {
+            width: 11px;
+            height: 11px;
+            border: 1px solid rgba(0, 0, 0, 0.18);
+            border-radius: 50%;
+        }
+        .mac-terminal-close { background: #ff5f57; }
+        .mac-terminal-minimize { background: #febc2e; }
+        .mac-terminal-zoom { background: #28c840; }
+        .mac-terminal-title {
+            overflow: hidden;
+            color: #b7babd;
+            font: 500 0.72rem 'JetBrains Mono', monospace;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .mac-terminal-spacer {
+            width: 52px;
+            flex: 0 0 52px;
+        }
+        .mac-terminal-body {
+            padding: clamp(1rem, 3.5vw, 2rem);
+            background-color: rgba(13, 17, 22, 0.42);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 100% 28px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .codeforces-hero-terminal {
+            width: 100%;
+            max-width: 37rem;
+            align-self: center;
+        }
+        .codeforces-hero-terminal .mac-terminal-body {
+            padding: 0.9rem;
+        }
+        .codeforces-hero-terminal .mac-terminal-titlebar {
+            min-height: 36px;
+        }
+        .codeforces-hero-terminal .codeforces-status {
+            min-height: 1rem;
+            margin-top: 0.35rem;
+            margin-bottom: 0.35rem;
+        }
+        .codeforces-hero-terminal .codeforces-command {
+            margin-bottom: 0.35rem;
+        }
+        .codeforces-terminal-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+        .codeforces-command {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0 0.45rem;
+            margin-bottom: 0.65rem;
+            color: #e5e7eb;
+            font-size: clamp(0.68rem, 2.5vw, 0.8rem);
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+        .codeforces-command-user { color: #86efac; }
+        .codeforces-command-path { color: #93c5fd; }
+        .codeforces-command-prompt { color: #facc15; }
+        #codeforces-submissions {
+            gap: 0.65rem;
+        }
+        .codeforces-hero-terminal #codeforces-submissions {
+            max-height: 10rem;
+            grid-template-columns: minmax(0, 1fr);
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            padding-right: 0.2rem;
+        }
+        .codeforces-hero-terminal #codeforces-submissions .submission-row {
+            padding: 0.7rem 0.8rem;
+        }
+        .codeforces-hero-terminal #codeforces-submissions .submission-meta {
+            line-height: 1.5;
+        }
+        #codeforces-submissions .submission-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: start;
+            column-gap: 0.5rem;
+            row-gap: 0.15rem;
+            border: 1px solid rgba(226, 232, 240, 0.1);
+            border-radius: 0.45rem;
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: inset 0 1px rgba(255, 255, 255, 0.035);
+            padding: 0.45rem 0.6rem;
+        }
+        #codeforces-submissions .submission-title,
+        #codeforces-submissions .submission-row > p {
+            margin: 0;
+        }
+        #codeforces-submissions .submission-meta {
+            grid-column: 1 / -1;
+        }
+        #codeforces-submissions .submission-row:hover {
+            border-color: rgba(31, 138, 203, 0.5);
+        }
+        #codeforces-submissions .submission-title {
+            color: #e5e7eb;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            line-height: 1.4;
+        }
+        #codeforces-submissions .submission-title:hover {
+            color: #60a5fa;
+        }
+        #codeforces-submissions .submission-meta {
+            color: #8b929a;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+        }
+        .submission-verdict {
+            display: inline-flex;
+            min-width: 2rem;
+            justify-content: center;
+            border-radius: 0.25rem;
+            padding: 0.1rem 0.35rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+        .submission-verdict-OK {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+        }
+        .submission-verdict-WRONG_ANSWER {
+            background: rgba(239, 68, 68, 0.16);
+            color: #f87171;
+        }
+        .submission-verdict-TIME_LIMIT_EXCEEDED,
+        .submission-verdict-MEMORY_LIMIT_EXCEEDED,
+        .submission-verdict-COMPILATION_ERROR {
+            background: rgba(234, 179, 8, 0.16);
+            color: #facc15;
+        }
+        .submission-verdict-TESTING,
+        .submission-verdict-CHALLENGED,
+        .submission-verdict-RUNTIME_ERROR,
+        .submission-verdict-IDLENESS_LIMIT_EXCEEDED,
+        .submission-verdict-SECURITY_VIOLATED,
+        .submission-verdict-CRASHED,
+        .submission-verdict-INPUT_PREPARATION_CRASHED,
+        .submission-verdict-FAILED {
+            background: rgba(148, 163, 184, 0.14);
+            color: #cbd5e1;
+        }
+        #codeforces-refresh {
+            min-height: 44px;
+            border-color: #3a4046;
+            background: #1d2125;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        #codeforces-refresh:disabled {
+            cursor: wait;
+            opacity: 0.6;
+        }
+        #codeforces-activity .codeforces-profile-link {
+            min-height: 44px;
+            align-items: center;
+            color: #60a5fa;
+        }
+        #codeforces-activity .codeforces-profile-link:hover {
+            color: #bfdbfe;
+        }
+        .submission-row {
+            min-width: 0;
+        }
+        .submission-title {
+            overflow-wrap: anywhere;
+        }
+        .submission-meta {
+            overflow-wrap: anywhere;
+        }
+        .codeforces-globe-ambient {
+            position: absolute;
+            z-index: 0;
+            top: -150px;
+            right: -130px;
+            pointer-events: none;
+            opacity: 0.72;
+        }
+        /* Glowing Wireframe Sphere Visual Effect */
+        .wireframe-globe {
+            width: 430px;
+            height: 430px;
+            border-radius: 50%;
+            border: 1px dashed rgba(190, 255, 99, 0.48);
+            box-shadow: inset 0 0 72px rgba(163, 230, 53, 0.18), 0 0 54px rgba(163, 230, 53, 0.24), 0 0 120px rgba(163, 230, 53, 0.14);
+            position: relative;
+            animation: rotateGlobe 20s linear infinite;
+        }
+        .wireframe-globe::before {
+            content: '';
+            position: absolute;
+            inset: 24px;
+            border-radius: 50%;
+            border: 1px solid rgba(190, 255, 99, 0.38);
+            transform: rotateX(65deg);
+        }
+        .wireframe-globe::after {
+            content: '';
+            position: absolute;
+            inset: 24px;
+            border-radius: 50%;
+            border: 1px solid rgba(190, 255, 99, 0.38);
+            transform: rotateY(65deg);
+        }
+
+        @keyframes rotateGlobe {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080b0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1b2420;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-lime);
+        }
+
+        @media (min-width: 1024px) and (max-width: 1199px) {
+            #home .grid.grid-cols-1 {
+                grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+                column-gap: 1.75rem;
+            }
+
+            #home .lg\:col-span-7,
+            #home .lg\:col-span-5 {
+                grid-column: auto;
+            }
+
+            #home .card-dark.max-w-md {
+                padding: 1.25rem;
+            }
+
+            #home .font-mono.text-xs.leading-relaxed {
+                font-size: 0.68rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            .codeforces-globe-ambient {
+                top: -115px;
+                right: -95px;
+            }
+
+            .wireframe-globe {
+                width: 340px;
+                height: 340px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .codeforces-hero-terminal #codeforces-submissions {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                max-height: none;
+                overflow: visible;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .codeforces-globe-ambient {
+                top: -82px;
+                right: -64px;
+                opacity: 0.6;
+            }
+
+            .wireframe-globe {
+                width: 240px;
+                height: 240px;
+                border-width: 1px;
+            }
+
+            #home h1 {
+                font-size: clamp(2.5rem, 11vw, 3.75rem);
+                overflow-wrap: anywhere;
+            }
+
+            #home .font-mono.text-xs.leading-relaxed {
+                overflow-wrap: anywhere;
+            }
+
+            #contact form {
+                padding: 1.25rem;
+            }
+
+            #activity .grid,
+            #experience .space-y-6 {
+                gap: 1rem;
+            }
+
+            .codeforces-hero-terminal {
+                max-width: 36rem;
+            }
+
+            .codeforces-hero-terminal #codeforces-submissions {
+                max-height: 10rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .codeforces-globe-ambient {
+                top: -100px;
+                right: -75px;
+            }
+
+            .wireframe-globe {
+                width: 310px;
+                height: 310px;
+            }
+        }
+
+        @media (max-width: 359px) {
+            #home h1 {
+                font-size: 2.25rem;
+            }
+
+            #codeforces-activity .flex.items-center.gap-3 {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
