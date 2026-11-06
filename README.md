@@ -50,6 +50,6 @@ The API must be reachable from the visitor's browser. The configured handle is `
 
 ## Editing and repository access
 
-The lock icon under the “Hello World” greeting links to the public `shahidulinit/shahidulinit.github.io` GitHub repository. Only the repository owner and collaborators with write access can push changes to the original repository. Other visitors may view, copy, or fork its public source. There is no browser-based admin login or editor.
+There is no browser-based admin login or editor. Edit the portfolio files locally and push changes to the repository to publish updates.
 
 This portfolio intentionally publishes its displayed name, email, city, university, profile links, and project links. Do not add passwords, private contact details, credentials, or other information you do not want public. Push changes to `main` to trigger the Pages workflow.
